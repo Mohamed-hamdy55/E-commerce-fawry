@@ -1,3 +1,4 @@
+import cart.Cart;
 import customer.Customer;
 import product.ExpirableShippableProduct;
 import product.Product;
@@ -16,11 +17,11 @@ public class App {
   
           Customer customer = new Customer("Ali", 10000);
 
-          System.out.println(customer.getName());
-          System.out.println(cheese.getName());
-          System.out.println(biscuits.getName());
-          System.out.println(tv.getName());
-          System.out.println(scratchCard.getName());
+          Cart cart = new Cart();
+          cart.add(cheese, 2);
+          cart.add(biscuits, 1);
+          cart.add(tv, 1);
+          cart.add(scratchCard, 1);
 
         }catch(Exception e){
             System.err.println(e.getMessage());
